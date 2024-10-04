@@ -14,14 +14,15 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 80%; /* Mengatur lebar video */
-    min-height: 80%; /* Mengatur tinggi video */
-    width: auto;
-    height: auto;
+    width: 100%; /* Menyesuaikan lebar */
+    height: 100%; /* Menyesuaikan tinggi */
+    object-fit: cover; /* Memastikan video terjaga proporsinya */
     z-index: 1;
-    opacity: 0.5; /* Sesuaikan opacity sesuai kebutuhan */
+    opacity: 0.5;
     transform: translate(-50%, -50%);
+    pointer-events: none; /* Menonaktifkan interaksi pada video */
 }
+
 .jumbotron::before {
     content: '';
     position: absolute;
